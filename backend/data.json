@@ -1,0 +1,45 @@
+{
+    "user": {
+        "id": 0,
+        "name": "Bob Marley",
+        "email": "bob@me.com",
+        "password": "password",
+        "state": 0.0
+    },
+    "stats": {
+        "id": 1,
+        "userId": 1,
+        "savings": 2300.0,
+        "debts": 25000.0,
+        "investments": 0.0,
+        "credit score": 700
+    },
+    "currentStats": {
+        "id": 1,
+        "userId": 1,
+        "savingsId": 0,
+        "debtsId": 0,
+        "investmentsId": 0,
+        "credit scoreId": 0
+    },
+    "savings": {
+        "id": 1,
+        "date": "2023/02/25",
+        "currentStatus": 0.0
+    },
+    "creditScore": {
+        "id": 1,
+        "date": "2023/02/26",
+        "currentStatus": 0
+    },
+    "debtFree": {
+        "id": 1,
+        "date": "2023/02/27",
+        "currentStatus": 0.0
+    },
+    "investments": {
+        "id": 1,
+        "date": "2023/02/28",
+        "currentStatus": 0.0
+    }
+}
