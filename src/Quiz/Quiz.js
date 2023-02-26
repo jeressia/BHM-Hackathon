@@ -151,7 +151,14 @@ const Quiz = (props) => {
   return (
     <div className='Quiz'>
       <h1>Quiz</h1>
-      {renderPage()}
+      <div className='main-quiz'>
+        <div className='quiz-question'>
+          {renderPage()}
+        </div>
+        <div className='moneybot'>
+          <img src="character.svg" alt="chatbot" className='moneybot-logo' />
+        </div>
+      </div>
       <div>
         <MobileStepper
           variant="dots"
