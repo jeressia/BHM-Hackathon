@@ -1,19 +1,16 @@
-.wrapper {
+.navbar {
     background-color: black;
     height: 100%;
-    width: 10vw;
+    width: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: white;
+    font-size: small;
 }
 
-/* #images {
-    height: 50%;
-    width: 50%;
-} */
-
 .logo {
-    height: 100px;
+    height: 75px;
     margin-top: 50px;
 }
 
@@ -23,8 +20,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    color: white;
-    font-size: small;
 }
 
 .icon-label {
@@ -47,4 +42,8 @@
 
 .medal {
     height: 45px;
+}
+
+.nav-footer {
+    text-align: center;
 }

@@ -4,7 +4,7 @@ import "./style.css";
 const Navbar = () => {
   return (
 
-    <div className="wrapper">
+    <div className="navbar">
       <img src="moneybotlogo.svg" className="logo" id="image" />
       <div className="img-wrapper">
         <img src="home.svg" className="img active" id="image" height="15" /><p className="icon-label">Home</p>
@@ -13,7 +13,7 @@ const Navbar = () => {
         <img src="profile.svg" className="img" id="image" /> <p className="icon-label">Profile</p>
         <img src="settings.svg" className="img" id="image" /> <p className="icon-label">Settings</p>
       </div>
-      <p>MoneyBot 2023</p>
+      <p className="nav-footer">MoneyBot&trade; 2023</p>
     </div>
   );
 
