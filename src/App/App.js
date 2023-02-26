@@ -1,6 +1,7 @@
 import './App.css';
 import './UserCard/UserCard'
 import UserCard from './UserCard/UserCard';
+import Chatbox from '../Chatbox/Chatbox.js'
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <div className='middle-area'>
         <UserCard user={user} />
       </div>
-      <div className='right-area'>Chatbox Goes Here</div>
+      <div className='right-area'><Chatbox /></div>
     </div>
   );
 }
