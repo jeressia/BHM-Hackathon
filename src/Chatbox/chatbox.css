@@ -9,6 +9,7 @@
 .chatbox-dialog {
     flex: 1;
     padding: 10px;
+    overflow-y: scroll;
 }
 
 .chatbox-prompt {
