@@ -1,0 +1,26 @@
+.Quiz {
+  color: #0a4520;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.main-quiz {
+  display: flex;
+}
+
+.quiz-question {
+  width: 700px;
+}
+
+.moneybot {
+  width: 50%;
+}
+
+.moneybot-logo {
+  height: 450px;
+}

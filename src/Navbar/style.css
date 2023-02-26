@@ -1,0 +1,49 @@
+.navbar {
+    background-color: black;
+    height: 100%;
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    font-size: small;
+}
+
+.logo {
+    height: 75px;
+    margin-top: 50px;
+}
+
+.img-wrapper {
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.icon-label {
+    opacity: 50%;
+    margin-top: 2px;
+}
+
+.icon-label:first-of-type {
+    opacity: 100%;
+}
+
+.img {
+    height: 35px;
+    opacity: 50%;
+}
+
+.active {
+    opacity: 100%;
+}
+
+.medal {
+    height: 45px;
+}
+
+.nav-footer {
+    text-align: center;
+}

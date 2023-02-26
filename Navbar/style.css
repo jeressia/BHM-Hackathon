@@ -1,0 +1,35 @@
+.wrapper
+{
+    background-color: black;
+    height: 75vh;
+    width: 15ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#images
+{
+max-height: 100%;
+max-width: 100%;
+}
+
+.logo
+{
+    height: 9ch
+}
+
+.img-wrapper
+{
+display: flex;
+flex-direction: column;
+margin-top: 170px;
+}
+
+.img
+{
+    height: 7ch;
+    margin-top: 20%
+}
