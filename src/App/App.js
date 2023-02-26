@@ -11,23 +11,36 @@ import './App.css';
 function App() {
   const navigate = useNavigate();
 
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [quizTaken, setQuizTaken] = useState(false);
   console.log("loggedIn", loggedIn)
+  console.log("setQuizTaken", quizTaken)
   return (
     <>
       {
-        !loggedIn && (
-          <button className="btn" onClick={() => {
-            setLoggedIn(true)
-            navigate('home')
-          }}>
-            Log in
-          </button>
-        )
-      }
+        (!loggedIn && !quizTaken) && (
+          <>
+            <Quiz />
+            <button className="btn" onClick={() => {
+              setLoggedIn(true)
+              navigate('home')
+            }}>
+              Log in new user
+            </button>
+          </>
+        )}
+      {
+        (!loggedIn && quizTaken) && (<button className="btn" onClick={() => {
+          setLoggedIn(true)
+          navigate('home')
+        }}>
+          Log in Returning User
+        </button>
+        )}
+
       <Routes>
         <Route path="/quiz" element={<Quiz />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} />} />
       </Routes>
     </>
   );
