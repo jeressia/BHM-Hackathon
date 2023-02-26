@@ -53,6 +53,24 @@ const Quiz = (props) => {
       case 3:
         return (
           <div>
+            <p>Great. Nice to meet you, {userData.firstName}. Do you have a username you'd like to go by? </p>
+            <label htmlFor="username">Username</label>
+            <input name="username" onBlur={(e) => { setUserData({ ...userData, username: e.target.value }) }}
+            />
+          </div>
+        );
+      case 4:
+        return (
+          <div>
+            <p>Awesome! I like the sound of that, {userData.username}. I wonder what you look like. Can you upload an image?</p>
+            <label htmlFor="userImgUrl">Image URL</label>
+            <input name="userImgUrl" onBlur={(e) => { setUserData({ ...userData, userImgUrl: e.target.value }) }}
+            />
+          </div>
+        );
+      case 5:
+        return (
+          <div>
             <p>Great. Nice to meet you, {userData.firstName}. When is your birthday?</p>
             <input
               type="date"
@@ -60,7 +78,7 @@ const Quiz = (props) => {
             />
           </div>
         );
-      case 4:
+      case 6:
         return (
           <div>
             <p>
@@ -70,7 +88,7 @@ const Quiz = (props) => {
             </p>
           </div>
         );
-      case 5:
+      case 7:
         return (
           <div>
             <p>What is your greatest financial goal at the moment?</p>
@@ -97,7 +115,7 @@ const Quiz = (props) => {
             }} />Retiring Early
           </div>
         );
-      case 6:
+      case 8:
         return (
           <div>
             <p>I hope this is not too forward, but how much money do you have saved at the moment?</p>
@@ -105,7 +123,7 @@ const Quiz = (props) => {
             />
           </div>
         );
-      case 7:
+      case 9:
         return (
           <div>
             <p>How much debt do you have? That includes credit cards, student loan, personal loans, and auto loans</p>
@@ -113,7 +131,7 @@ const Quiz = (props) => {
             />
           </div>
         );
-      case 8:
+      case 10:
         return (
           <div>
             <p>Do you know your current credit score?</p>
@@ -121,7 +139,7 @@ const Quiz = (props) => {
             /><a href='http://www.creditkarma.com' target="_blank" rel="noopener noreferrer">No, I don't know my credit score.</a>
           </div>
         );
-      case 9:
+      case 11:
         return (
           <div>
             <p>How comfortable are you with your finances right now?</p>
@@ -149,7 +167,6 @@ const Quiz = (props) => {
 
   return (
     <div className='Quiz'>
-      <h1>Quiz</h1>
       <div className='main-quiz'>
         <div className='quiz-question'>
           {renderPage()}
@@ -161,12 +178,12 @@ const Quiz = (props) => {
       <div>
         <MobileStepper
           variant="dots"
-          steps={9}
+          steps={11}
           position="static"
           activeStep={activeStep}
           sx={{ maxWidth: 400, flexGrow: 1 }}
           nextButton={
-            <Button size="small" onClick={handleNext} disabled={activeStep === 8}>
+            <Button size="small" onClick={handleNext} disabled={activeStep === 10}>
               Next
             </Button>
           }

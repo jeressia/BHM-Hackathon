@@ -11,7 +11,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [quizTaken, setQuizTaken] = useState(false);
 
-  const [userData, setUserData] = useState({ userImgUrl: 'http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQoNG-jW5p2OrTrpjk-DMtQlic1W2EWuh-QNKpNJTocQUrWPxt8AxtdCnwkXNVbDm2OYAD2dAOTAQzXR3Q', userStatus: 'Noob', username: 'jeressia' })
+  const [userData, setUserData] = useState({ userStatus: 'Noob' })
 
 
   return (

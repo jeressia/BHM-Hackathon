@@ -8,16 +8,6 @@ import Chatbox from '../Chatbox/Chatbox';
 
 function Home(props) {
   const { setLoggedIn, setQuizTaken, userData } = props;
-  console.log("userData in home: ", userData)
-
-  // const user = {
-  //   userId: 1,
-  //   username: 'wesSnipes',
-  //   firstName: 'Wesley',
-  //   lastName: 'Snipes',
-  //   userStatus: 'Finance Newbie',
-  //   userImgUrl: 'http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQoNG-jW5p2OrTrpjk-DMtQlic1W2EWuh-QNKpNJTocQUrWPxt8AxtdCnwkXNVbDm2OYAD2dAOTAQzXR3Q'
-  // }
 
   return (
     <div className="Home">
