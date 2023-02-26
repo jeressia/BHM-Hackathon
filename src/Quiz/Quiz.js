@@ -14,8 +14,7 @@ const Quiz = (props) => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
-  const { setLoggedIn } = props;
-  const [userData, setUserData] = useState({})
+  const { setLoggedIn, userData, setUserData } = props;
   const [page, setPage] = useState(1);
 
   const handleNext = event => {

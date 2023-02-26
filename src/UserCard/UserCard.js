@@ -3,15 +3,15 @@ import React from 'react'
 import './UserCard.css';
 
 function UserCard(props) {
-  const { user } = props
+  const { userData } = props
   return (
     <div className='UserCard'>
       <div className='left-user-card'>
-        <img alt="user" class="userImg" src={user.userImgUrl} />
+        <img alt="user" class="userImg" src={userData.userImgUrl} />
       </div>
       <div className='right-user-card'>
-        <p className='usercard-username'>{user.firstName} {user.lastName} | <span className='usercard-atname'>@{user.username}</span></p>
-        <p className='usercard-status'>{user.userStatus}</p>
+        <p className='usercard-username'>{userData.firstName} {userData.lastName} | <span className='usercard-atname'>@{userData.username}</span></p>
+        <p className='usercard-status'>{userData.userStatus}</p>
       </div>
     </div>
   )

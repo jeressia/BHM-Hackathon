@@ -11,13 +11,15 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [quizTaken, setQuizTaken] = useState(false);
 
+  const [userData, setUserData] = useState({ userImgUrl: 'http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQoNG-jW5p2OrTrpjk-DMtQlic1W2EWuh-QNKpNJTocQUrWPxt8AxtdCnwkXNVbDm2OYAD2dAOTAQzXR3Q', userStatus: 'Noob', username: 'jeressia' })
+
+
   return (
     <>
       {
         (!loggedIn && !quizTaken) && (
           <>
-            <Quiz setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} />
-
+            <Quiz setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} userData={userData} setUserData={setUserData} />
           </>
         )}
       {
@@ -30,8 +32,8 @@ function App() {
         )}
 
       <Routes>
-        <Route path="/quiz" element={<Quiz setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} />} />
-        <Route path="/home" element={<Home setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} />} />
+        <Route path="/quiz" element={<Quiz setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} userData={userData} setUserData={setUserData} />} />
+        <Route path="/home" element={<Home setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} userData={userData} />} />
       </Routes>
     </>
   );
