@@ -9,7 +9,7 @@ function Quiz() {
   console.log("userData: ", userData)
   return (
     <div>
-      <p>Chatbox Introduces himself</p>
+      <p>Welcome to our financial help app! I'm Moneybot. I'm here to help you manage your money with a little bit of humor and a lot of practical advice. Let's get started and turn those financial frowns upside down!</p>
       <p>Let’s start by getting your name! You are?</p>
       <label htmlFor="firstName">First Name</label>
       <input name="firstName" onBlur={(e) => { setUserData({ ...userData, firstName: e.target.value }) }}
@@ -26,7 +26,7 @@ function Quiz() {
           setUserData({ ...userData, state: e })
         }} />
       </p>
-      <p>What is your greatest financial at the moment?</p>
+      <p>What is your greatest financial goal at the moment?</p>
       <input type="radio" name="motivation" value="1" id="" onChange={(e) => {
         setUserData({ ...userData, keyMotivationId: e.target.value })
       }} />Purchase a House/Car
