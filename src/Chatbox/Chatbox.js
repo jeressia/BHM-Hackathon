@@ -2,7 +2,6 @@ import './chatbox.css';
 import MoneyBotIcon from './icons/moneybot-icon.svg'
 
 function ChatBubble(props) {
-    // let [talker, children] = props;
     return (
         <div className={`chatbox-bubble ${props.talker}`}>
             <div className="chatbox-bubble__icon">
