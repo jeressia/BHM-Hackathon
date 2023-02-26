@@ -8,9 +8,8 @@
   flex: .25;
 }
 
-.left-area,
-.right-area {
-  flex: 2;
+.left-area {
+  flex: 1.5;
 }
 
 .right-area {
@@ -19,8 +18,10 @@
   justify-content: flex-end;
   height: 100vh;
   padding: 0 15px;
+  flex: 2;
+
 }
 
 .middle-area {
-  flex: 2.5;
+  flex: 3;
 }
