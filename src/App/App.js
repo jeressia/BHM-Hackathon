@@ -16,13 +16,8 @@ function App() {
       {
         (!loggedIn && !quizTaken) && (
           <>
-            <Quiz />
-            <button className="btn" onClick={() => {
-              setLoggedIn(true)
-              navigate('home')
-            }}>
-              Log in new user
-            </button>
+            <Quiz setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} />
+
           </>
         )}
       {
@@ -35,7 +30,7 @@ function App() {
         )}
 
       <Routes>
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz" element={<Quiz setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} />} />
         <Route path="/home" element={<Home setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} />} />
       </Routes>
     </>
