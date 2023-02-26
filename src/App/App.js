@@ -13,8 +13,7 @@ function App() {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [quizTaken, setQuizTaken] = useState(false);
-  console.log("loggedIn", loggedIn)
-  console.log("setQuizTaken", quizTaken)
+
   return (
     <>
       {
