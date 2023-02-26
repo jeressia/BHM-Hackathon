@@ -48,6 +48,25 @@ function Quiz() {
       <input type="radio" name="motivation" value="7" id="" onChange={(e) => {
         setUserData({ ...userData, keyMotivationId: e.target.value })
       }} />Retiring Early
+      <p>I hope this is not too forward, but how much money do you have saved at the moment?</p>
+      <input name="firstName" onBlur={(e) => { setUserData({ ...userData, moneySaved: e.target.value }) }}
+      />
+      <p>How much debt do you have? That includes credit cards, student loan, personal loans, and auto loans</p>
+      <input name="firstName" onBlur={(e) => { setUserData({ ...userData, moneyOwed: e.target.value }) }}
+      />
+      <p>Do you know your current credit score?</p>
+      <input name="firstName" onBlur={(e) => { setUserData({ ...userData, creditScore: e.target.value }) }}
+      /><a href='http://www.creditkarma.com' target="_blank" rel="noopener noreferrer">No, I don't know my credit score.</a>
+      <p>What is your greatest financial at the moment?</p>
+      <input type="radio" name="userStatus" value="1" id="" onChange={(e) => {
+        setUserData({ ...userData, userStatusId: e.target.value })
+      }} />Finance Newbie
+      <input type="radio" name="userStatus" value="2" id="" onChange={(e) => {
+        setUserData({ ...userData, userStatusId: e.target.value })
+      }} />Average
+      <input type="radio" name="userStatus" value="3" id="" onChange={(e) => {
+        setUserData({ ...userData, userStatusId: e.target.value })
+      }} /> Money Master
     </div >
   )
 }
