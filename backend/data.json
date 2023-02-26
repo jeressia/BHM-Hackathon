@@ -1,10 +1,14 @@
 {
     "user": {
         "id": 0,
-        "name": "Bob Marley",
+        "firstName": "Bob",
+        "lastName": "Marley",
+        "username": "marleyB",
         "email": "bob@me.com",
         "password": "password",
-        "state": 0.0
+        "DOB": "1945/02/06",
+        "keyMotivationId": 1,
+        "state": "TN"
     },
     "stats": {
         "id": 1,
@@ -41,5 +45,35 @@
         "id": 1,
         "date": "2023/02/28",
         "currentStatus": 0.0
-    }
+    },
+    "keyMotivation": [
+        {
+            "id": 1,
+            "motivation": "Purchase a House/Car"
+        },
+        {
+            "id": 2,
+            "motivation": "Becoming debt free"
+        },
+        {
+            "id": 3,
+            "motivation": "Increase your credit"
+        },
+        {
+            "id": 4,
+            "motivation": "Saving Money"
+        },
+        {
+            "id": 5,
+            "motivation": "Sticking to a budget"
+        },
+        {
+            "id": 6,
+            "motivation": "Creating a new stream of income"
+        },
+        {
+            "id": 7,
+            "motivation": "Retiring Early"
+        }
+    ]
 }
