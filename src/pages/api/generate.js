@@ -5,32 +5,14 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-//Will move this function to form wizard
-async function onSubmit(event) {
-    event.preventDefault();
-    try {
-      const response = await fetch("/api/generate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ userProfile: userInput }),
-      });
-
-      const data = await response.json();
-      if (response.status !== 200) {
-        throw data.error || new Error(`Request failed with status ${response.status}`);
-      }
-
-    //   setResult(data.result);
-    //   setUserInput("");
-    } catch(error) {
-      // Consider implementing your own error handling logic here
-      console.error(error);
-      alert(error.message);
-    }
+export default async function (req, res) {
+  console.log(req)
+  console.log('api success')
+  // res.status(200).json({ 'result': 'moneybot talked back' });
+  res.status(200);
 }
 
+/*
 export default async function (req, res) {
     if (!configuration.apiKey) {
       res.status(500).json({
@@ -52,6 +34,11 @@ export default async function (req, res) {
     }
   
     try {
+
+        //check if request is from quiz. switch control for 
+        //prompt function (?)
+
+     /*
       const completion = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: generateGoals(userProfile),
@@ -73,6 +60,7 @@ export default async function (req, res) {
       }
     }
 }
+*/
 
 function generateGoals(userProfile) {
     // Replace with descriptive paragraph of user and ask about some beginner goals
@@ -82,6 +70,16 @@ function generateGoals(userProfile) {
     My current credit score is ${userProfile.creditScore}. I have saved $${moneySaved} and have debts totaling $${moneyOwed}.
     Suggest three goals in array format that will help me ${userProfile.keyMotivationId}.
     `
+    return userprompt;
+}
 
+function amaBot(userQuestion) {
+    // Replace with descriptive paragraph of user and ask about some beginner goals
+    // Also ask to list steps in array format
+    let userprompt = `
+    I'm looking to better my financial situation. I was born on ${userProfile.dateOfBirth} and live in the United States state abbreviated ${userProfile.state}. 
+    My current credit score is ${userProfile.creditScore}. I have saved $${moneySaved} and have debts totaling $${moneyOwed}.
+    Suggest three goals in array format that will help me ${userProfile.keyMotivationId}.
+    `
     return userprompt;
 }

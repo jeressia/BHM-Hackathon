@@ -16,7 +16,7 @@
     padding: 10px 10px 15px;
 }
 
-.chatbox-prompt input {
+.chatbox-prompt input[type=text] {
     padding: 15px 20px;
     border: none;
     border-top-left-radius: 12px;
@@ -26,7 +26,7 @@
     color: #585757;
 }
 
-.chatbox-prompt button {
+.chatbox-prompt input[type=submit] {
     background-color: black;
     color: white;
     border: none;

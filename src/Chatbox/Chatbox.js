@@ -1,5 +1,6 @@
 import './chatbox.css';
 import MoneyBotIcon from './icons/moneybot-icon.svg'
+import { useState } from 'react';
 
 function ChatBubble(props) {
     return (
@@ -21,20 +22,66 @@ function ChatBubble(props) {
 }
 
 function Chatbox() {
+    const [dialog, setDialog] = useState([
+        <ChatBubble key={1} talker="moneybot">Hello, Blade! I'm MoneyBot. Ask me your finance questions.</ChatBubble>,
+        <ChatBubble key={2} talker="user">Hello, Moneybot! How can I XYZ?</ChatBubble>,
+        <ChatBubble key={3} talker="moneybot">I can most certainly help with that....</ChatBubble>
+    ]);
+    const [userInput, setUserInput] = useState("");
+    // const [result, setResult] = useState();
+    
+
+    async function onSubmit (e) {
+        e.preventDefault();
+
+        //Append User Input to dialog
+        setDialog(
+            [...dialog, <ChatBubble key={dialog.length+1} talker="user">{userInput}</ChatBubble>]
+        )
+
+        //Send User Input to OpenAI API 
+        try {
+            const response = await fetch("/api/generate", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ userQuestion: userInput }),
+            });
+      
+            const data = await response.json();
+            if (response.status !== 200) {
+              throw data.error || new Error(`Request failed with status ${response.status}`);
+            }
+            //Append response to dialog
+            setDialog([...dialog, <ChatBubble key={dialog.length+1} talker="moneybot">{data.result}</ChatBubble>]);
+            setUserInput("");
+            
+          } catch(error) {
+            // Consider implementing your own error handling logic here
+            console.error(error);
+            alert(error.message);
+          }
+
+    }
+
     return (
         <div className="chatbox">
             <div className="chatbox-dialog">
-                <ChatBubble talker="moneybot">Hello, Blade! I'm MoneyBot. Ask me your finance questions.</ChatBubble>
-                <ChatBubble talker="user">Hello, Moneybot! How can I XYZ?</ChatBubble>
-                <ChatBubble talker="moneybot">I can most certainly help with that....</ChatBubble>
+                {dialog}
             </div>
-            <div className="chatbox-prompt">
+            <form 
+                className="chatbox-prompt"
+                onSubmit={onSubmit}
+            >
                 <input
                     type="text"
-                    placeholder='Ask Me Anything'
+                    placeholder="Ask Me Anything"
+                    value={userInput}
+                    onChange={(e)=> setUserInput(e.target.value)}
                 />
-                <button></button>
-            </div>
+                <input type="submit" value="" />
+            </form>
         </div>
     );
 }
