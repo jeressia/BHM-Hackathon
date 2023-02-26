@@ -4,19 +4,23 @@
   justify-content: space-between;
 }
 
-.left-nav{
-  flex:.25;
-  background-color: red;
+.left-nav {
+  flex: .25;
 }
 
-.left-area, .right-area{
-  flex:2;
-  background-color: pink;
-
+.left-area,
+.right-area {
+  flex: 2;
 }
 
-.middle-area{
-  flex:2.5;
-  background-color: blue;
+.right-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  padding: 0 15px;
+}
 
+.middle-area {
+  flex: 2.5;
 }
