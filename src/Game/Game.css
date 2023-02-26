@@ -1,0 +1,15 @@
+.Game {
+  /* background-image: url('gameboard.png'); */
+  color: yellow;
+  height: 800px;
+}
+
+img .Game {
+  height: 500px;
+}
+
+.character {
+  position: relative;
+  left: 500px;
+  top: 60px;
+}
