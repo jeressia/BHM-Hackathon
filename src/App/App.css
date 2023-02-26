@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.left-nav{
+  flex:.25;
+  background-color: red;
+}
+
+.left-area, .right-area{
+  flex:2;
+  background-color: pink;
+
+}
+
+.middle-area{
+  flex:2.5;
+  background-color: blue;
+
+}

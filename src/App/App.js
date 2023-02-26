@@ -15,7 +15,12 @@ function App() {
 
   return (
     <div className="App">
-      <UserCard user={user} />
+      <div className="left-nav">Nav Bar Goes Here</div>
+      <div className='left-area'>Task Area Goes Here</div>
+      <div className='middle-area'>
+        <UserCard user={user} />
+      </div>
+      <div className='right-area'>Chatbox Goes Here</div>
     </div>
   );
 }
