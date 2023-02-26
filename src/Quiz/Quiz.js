@@ -2,7 +2,7 @@ import { useState } from 'react';
 import React from 'react'
 
 function Quiz() {
-  const [userData, setUserData] = useState({ firstName: '', lastName: '' })
+  const [userData, setUserData] = useState({})
   console.log("userData: ", userData)
   return (
     <div>
@@ -14,6 +14,10 @@ function Quiz() {
       <label htmlFor="lastName">Last Name</label><input name="lastName" onBlur={(e) => { setUserData({ ...userData, lastName: e.target.value }) }}></input>
 
       <p>Great. Nice to meet you, {userData.firstName}. When is your birthday?</p>
+      <input
+        type="date"
+        onChange={(e) => { setUserData({ ...userData, dateOfBirth: e.target.value }) }}
+      />
     </div >
   )
 }
