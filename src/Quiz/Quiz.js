@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
-// import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-// import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+
+import './Quiz.css'
 
 const Quiz = (props) => {
   const navigate = useNavigate();
@@ -149,7 +149,7 @@ const Quiz = (props) => {
   };
 
   return (
-    <div>
+    <div className='Quiz'>
       <h1>Quiz</h1>
       {renderPage()}
       <div>
