@@ -1,17 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom"
-// import { CreditGrowth } from "./CreditGrowth";
-// import { DebtFree } from "./DebtFree"
-// import { Investments } from "./Investments";
-// import { Savings } from "./Savings"
+import { useNavigate } from "react-router-dom"
 
 export const ChallengeList = () => {
+
+    const navigate = useNavigate()
+
+    const navigateChallenge = () => {
+        return navigate("/challenge/debt_free")
+    }
+
     return <>
         <div>
-            <Link to="./CreditGrowth">Credit Growth</Link>
-            <Link to="DebtFree">Debt Free</Link>
-            <Link to="Investments">Investments</Link>
-            <Link to="Savings">Savings</Link>
+            <button>
+                {navigateChallenge()}
+            </button>
+            {/* <button onChange={"/challenge/debt_free"}>Debt Free</button>
+            <button onChange={"/challenge/investments"}>Investments</button>
+            <button onChange={"/challenge/savings"}>Savings</button> */}
         </div>
     </>
 }
