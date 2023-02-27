@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 export const Searchbar = () => {
 
     const [searchInput, setSearchInput] = useState("");
-    const [filteredCountries, setFilteredCountries] = useState([]);
+    const [filteredChallenge, setFilteredChallenge] = useState([]);
 
-    const countries = [
+    const challenge = [
 
         { id: 1, name: "Savings" },
         { id: 2, name: "Debt-Free" },
@@ -15,64 +15,59 @@ export const Searchbar = () => {
 
     const handleChange = (e) => {
         setSearchInput(e.target.value);
-        setFilteredCountries(
-            countries.filter((country) =>
+        setFilteredChallenge(
+            challenge.filter((country) =>
                 country.name.toLowerCase().includes(e.target.value.toLowerCase())
             )
         );
     };
 
     if (searchInput.length > 0) {
-        countries.filter((country) => {
+        challenge.filter((country) => {
             return country.name.match(searchInput);
         });
     }
 
-    return <>
-        <form>
-            <input
-                type="text"
-                placeholder="search"
-                value={searchInput}
-                onChange={handleChange}
-            />
-            <button type='submit'>
-                search
-            </button>
-        </form>
-        <ul>
-            {countries.map((i) => (
-                <li key={i.id}>{i.name}</li>
-            ))}
-        </ul>
-    </>
-
-
-    // return <div>
-
-    //     <input
-    //         type="text"
-    //         placeholder="Debt Free"
-    //         onChange={handleChange}
-    //         value={searchInput} />
-
-    //     <table>
-
-    //         <tbody>
-    //             {filteredCountries.map((country) => (
-    //                 <tr>
-    //                     <td>{country.name}</td>
-    //                 </tr>
-    //             ))}
-    //         </tbody>
-
-    //     </table>
+    // return <>
     //     <form>
-    //         <button type='submit' >
-    //             <img src=''
-    //                 className='' />
+    //         <input
+    //             type="text"
+    //             placeholder="search"
+    //             value={searchInput}
+    //             onChange={handleChange}
+    //         />
+    //         <button type='submit'>
+    //             search
     //         </button>
     //     </form>
+    // </>
 
-    // </div>
+
+    return <div>
+
+        <input
+            type="text"
+            placeholder="Debt Free"
+            onChange={handleChange}
+            value={searchInput} />
+
+        <table>
+
+            <tbody>
+                {filteredChallenge.map((challenge) => (
+                    <tr>
+                        <td>{challenge.name}</td>
+                    </tr>
+                ))}
+            </tbody>
+
+        </table>
+        <form>
+            <button type='submit' >search
+                {/* <img src=''
+                    className='' /> */}
+            </button>
+        </form>
+
+    </div>
 }

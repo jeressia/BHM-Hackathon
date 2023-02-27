@@ -1,10 +1,12 @@
 import React from "react";
 import { Searchbar } from "./Searchbar";
+import { ChallengeList } from "./ChallengeList";
+
 
 export const Checklist = () => {
 
     const numOfChallenges = () => {
-        return 8
+        return 4
     }
 
     return <>
@@ -16,6 +18,9 @@ export const Checklist = () => {
         </div>
         <div>
             <Searchbar />
+        </div>
+        <div>
+            <ChallengeList />
         </div>
     </>
 }
