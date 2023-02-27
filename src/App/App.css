@@ -1,4 +1,4 @@
-.App {
+.Home {
   display: flex;
   min-height: 100vh;
   justify-content: space-between;
@@ -6,16 +6,22 @@
 
 .left-nav {
   flex: .25;
-  background-color: red;
 }
 
-.left-area,
+.left-area {
+  flex: 1.5;
+}
+
 .right-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  padding: 0 15px;
   flex: 2;
-  background-color: pink;
 
 }
 
 .middle-area {
-  flex: 2.5;
+  flex: 3;
 }

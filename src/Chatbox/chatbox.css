@@ -1,9 +1,10 @@
 .chatbox {
     background: radial-gradient(70% 70% at 78.68% 12%, #7BC5D3 0%, #8CAB7C 69%, #B4A47B 100%);
-    height: 100vh;
+    height: 90%;
     display: flex;
     flex-direction: column;
     font-size: 16px;
+    border-radius: 15px 15px 0 0;
 }
 
 .chatbox-dialog {

@@ -1,15 +1,41 @@
-import './App.css';
-import Chatbox from '../Chatbox/Chatbox.js'
-import Game from '../Game/Game.js'
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import Quiz from '../Quiz/Quiz';
+import { useNavigate } from 'react-router-dom';
 
+import './App.css';
 function App() {
+  const navigate = useNavigate();
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [quizTaken, setQuizTaken] = useState(false);
+
+  const [userData, setUserData] = useState({ userStatus: 'Noob' })
+
+
   return (
-    <div className="App">
-      <div className="left-nav">Nav Bar Goes Here</div>
-      <div className='left-area'>Task Area Goes Here</div>
-      <div className='middle-area'><Game /></div>
-      <div className='right-area'><Chatbox /></div>
-    </div>
+    <>
+      {
+        (!loggedIn && !quizTaken) && (
+          <>
+            <Quiz setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} userData={userData} setUserData={setUserData} />
+          </>
+        )}
+      {
+        (!loggedIn && quizTaken) && (<button className="btn" onClick={() => {
+          setLoggedIn(true)
+          navigate('home')
+        }}>
+          Log in Returning User
+        </button>
+        )}
+
+      <Routes>
+        <Route path="/quiz" element={<Quiz setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} userData={userData} setUserData={setUserData} />} />
+        <Route path="/home" element={<Home setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} userData={userData} />} />
+      </Routes>
+    </>
   );
 }
 
