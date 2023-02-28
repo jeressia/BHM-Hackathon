@@ -25,14 +25,6 @@
   font-size: 50px;
 }
 
-progress::-moz-progress-bar {
-  accent-color: #00b227;
-}
-
-progress::-webkit-progress-value {
-  accent-color: #00b227;
-}
-
-progress {
+progress:first-of-type {
   accent-color: #00b227;
 }

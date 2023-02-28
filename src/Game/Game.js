@@ -38,9 +38,12 @@ const Game = (props) => {
   ])
   const [progressPercent, setProgressPercent] = useState(0);
 
+  const addPercent = () => {
+    setProgressPercent(progressPercent + 1)
+  }
+
   return (
     <div className="Game">
-      <h1>{userData.userStatus}</h1>
       <div className='all-levels'>
         {gameLevels.map((level) => {
           return (
@@ -51,6 +54,8 @@ const Game = (props) => {
             </div>
           )
         })}
+
+        <button onClick={addPercent}>Level Up</button>
       </div>
     </div >
   )
