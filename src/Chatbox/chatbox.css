@@ -10,6 +10,7 @@
 .chatbox-dialog {
     flex: 1;
     padding: 10px;
+    overflow-y: scroll;
 }
 
 .chatbox-prompt {
@@ -17,7 +18,7 @@
     padding: 10px 10px 15px;
 }
 
-.chatbox-prompt input {
+.chatbox-prompt input[type=text] {
     padding: 15px 20px;
     border: none;
     border-top-left-radius: 12px;
@@ -27,7 +28,7 @@
     color: #585757;
 }
 
-.chatbox-prompt button {
+.chatbox-prompt input[type=submit] {
     background-color: black;
     color: white;
     border: none;
@@ -71,28 +72,28 @@
     font-size: inherit;
 }
 
-.chatbox-bubble.moneybot .chatbox-bubble__icon {
+.chatbox-bubble.moneybot-bubble .chatbox-bubble__icon {
     margin-right: 10px;
 }
 
-.chatbox-bubble.moneybot .chatbox-bubble__icon div {
+.chatbox-bubble.moneybot-bubble .chatbox-bubble__icon div {
     background-color: white;
 }
 
-.chatbox-bubble.user .chatbox-bubble__icon {
+.chatbox-bubble.user-bubble .chatbox-bubble__icon {
     order: 2;
     margin-left: 10px;
 }
 
-.chatbox-bubble.user .chatbox-bubble__icon div {
+.chatbox-bubble.user-bubble .chatbox-bubble__icon div {
     background-color: pink;
 }
 
-.chatbox-bubble.user .chatbox-bubble__msg {
+.chatbox-bubble.user-bubble .chatbox-bubble__msg {
     margin-left: auto;
 }
 
-.chatbox-bubble.user .chatbox-bubble__msg p {
+.chatbox-bubble.user-bubble .chatbox-bubble__msg p {
     border-top-left-radius: 18px;
     border-top-right-radius: 0px;
 }
