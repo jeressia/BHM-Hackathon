@@ -26,7 +26,7 @@ const Navbar = (props) => {
           Log out
         </button>
       </div>
-      <p className="nav-footer">MoneyBot&trade; 2023</p>
+      <p className="nav-footer">MoneyBot&trade; 2023 </p>
     </div>
   );
 
