@@ -1,9 +1,10 @@
 import React from 'react'
 
-import Navbar from '../Navbar/Navbar';
-import UserCard from '../UserCard/UserCard';
-import Chatbox from '../Chatbox/Chatbox';
+import Navbar from '../App/Navbar/Navbar';
+import UserCard from '../App/UserCard/UserCard';
+import Chatbox from '../App/Chatbox/Chatbox';
 import Challenges from '../App/Challenges/Challenges';
+import Game from '../App/Game/Game';
 
 
 function Home(props) {
@@ -15,7 +16,10 @@ function Home(props) {
         <Navbar setQuizTaken={setQuizTaken} setLoggedIn={setLoggedIn} />
       </div>
       <div className='left-area'><Challenges /></div>
-      <div className='middle-area'><UserCard userData={userData} /></div>
+      <div className='middle-area'>
+        <UserCard userData={userData} />
+        <Game />
+      </div>
       <div className='right-area'><Chatbox /></div>
     </div>
   )

@@ -1,7 +1,7 @@
 import './chatbox.css';
 import MoneyBotIcon from './icons/moneybot-icon.svg'
 import { useState } from 'react';
-import fetchData from '../pages/api/generate';
+import fetchData from '../../pages/api/generate';
 
 function ChatBubble(props) {
     const formattedResponse = props.children.replace(/\n/g, '<br>');

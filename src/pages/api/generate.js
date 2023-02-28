@@ -42,18 +42,18 @@ export default async function fetchData(req, res) {
 }
 
 export async function makeGoals() {
-  
+
   //Ask GPT for starter goals
   const response = await fetchData(`Can you list three goals for ${'investments'} in javascript array format `);
   const data = await response;
 
   //Data comes back
   let dataTest = ['Maximize return on investment', 'Minimize risk', 'Achieve financial independence'];
-  
-  if(Array.isArray(dataTest)){
+
+  if (Array.isArray(dataTest)) {
     //Send data to goals
     dataTest.map(item => {
-      return goal.push(item);
+      return data.push(item);
     })
   }
 
