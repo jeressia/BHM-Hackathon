@@ -16,13 +16,13 @@
 }
 
 progress::-moz-progress-bar {
-  background: blue;
+  accent-color: #00b227;
 }
 
 progress::-webkit-progress-value {
-  background: blue;
+  accent-color: #00b227;
 }
 
 progress {
-  color: blue;
+  accent-color: #00b227;
 }

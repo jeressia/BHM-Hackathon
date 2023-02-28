@@ -4,7 +4,9 @@ import './Game.css';
 
 const Game = (props) => {
   const { userData } = props;
+  const [gameLevels, setGameLevels] = useState([])
   const [progressPercent, setProgressPercent] = useState(25);
+
   return (
     <div className="Game">
       <h1>{userData.userStatus}</h1>
