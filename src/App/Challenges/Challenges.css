@@ -1,0 +1,28 @@
+.challenges-section {
+    padding-left: 20px;
+}
+
+.challenges-checklist input[type='checkbox']{
+    margin-right: 12px;
+}
+.challenges-checkbox{
+    margin-bottom: 10px;
+    position: relative;
+}
+.task-parent{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.subtask-checkbox{
+    margin-left: 40px;
+}
+
+.task-child{
+    font-size: 18px;
+}
+
+.challenges-section label.is-complete{
+    text-decoration: line-through;
+    opacity: .3;
+}

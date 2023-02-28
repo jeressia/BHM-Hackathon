@@ -1,0 +1,27 @@
+.Home {
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.left-nav {
+  flex: .25;
+}
+
+.left-area {
+  flex: 1.5;
+}
+
+.right-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  padding: 0 15px;
+  flex: 2;
+
+}
+
+.middle-area {
+  flex: 3;
+}
