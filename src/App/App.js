@@ -11,7 +11,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [quizTaken, setQuizTaken] = useState(false);
 
-  const [userData, setUserData] = useState({ userStatus: 'Noob' })
+  const [userData, setUserData] = useState({ userImgUrl: 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2022-03/220317-Cynthia-Talla-ew-321p-4bc199.jpg', userStatus: 'Noob' })
 
 
   return (
