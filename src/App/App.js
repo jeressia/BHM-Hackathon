@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
-import Quiz from '../Quiz/Quiz';
+import Quiz from '../App/Quiz/Quiz';
 import { useNavigate } from 'react-router-dom';
 
 import './App.css';
