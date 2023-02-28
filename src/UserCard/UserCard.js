@@ -7,7 +7,7 @@ function UserCard(props) {
   return (
     <div className='UserCard'>
       <div className='left-user-card'>
-        <img alt="user" class="userImg" src={userData.userImgUrl} />
+        <img alt="user" className="userImg" src={userData.userImgUrl} />
       </div>
       <div className='right-user-card'>
         <p className='usercard-username'>{userData.firstName} {userData.lastName} | <span className='usercard-atname'>@{userData.username}</span></p>
