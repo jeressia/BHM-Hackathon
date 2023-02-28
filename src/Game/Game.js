@@ -8,13 +8,13 @@ const Game = (props) => {
     {
       id: 1,
       name: 'LVL 1',
-      percentToComplete: 10,
+      percentToComplete: 5,
       isComplete: false
     },
     {
       id: 2,
       name: 'LVL 2',
-      percentToComplete: 15,
+      percentToComplete: 10,
       isComplete: false
     },
     {
@@ -40,22 +40,31 @@ const Game = (props) => {
 
   const addPercent = () => {
     setProgressPercent(progressPercent + 1)
+    gameLevels.map((level, index) => {
+      if (progressPercent === level.percentToComplete) {
+        gameLevels.splice(index, 1, { ...level, isComplete: true })
+        // console.log("gameLevelsssss", gameLevels)
+        setGameLevels(gameLevels)
+      }
+    })
   }
 
   return (
     <div className="Game">
       <div className='all-levels'>
-        {gameLevels.map((level) => {
-          return (
-            <div className='level'>
-              <div className="level-indicator">{level.name}</div>
-              <progress role="progressbar" max={level.percentToComplete} value={level.isComplete ? level.percentToComplete : progressPercent}>
-              </progress>
-            </div>
-          )
-        })}
+        {
+          gameLevels.map((level) => {
+            return (
+              <div className='level'>
+                <div className={`level-indicator ${level.isComplete ? "complete" : ""}`}>{level.name}</div>
+                <progress role="progressbar" max={level.percentToComplete} value={level.isComplete ? level.percentToComplete : progressPercent}>
+                </progress>
+              </div>
+            )
+          })}
 
         <button onClick={addPercent}>Level Up</button>
+
       </div>
     </div >
   )

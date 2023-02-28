@@ -11,7 +11,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [quizTaken, setQuizTaken] = useState(false);
 
-  const [userData, setUserData] = useState({ userStatus: 'Noob' })
+  const [userData, setUserData] = useState({ userImgUrl: 'https://www.looper.com/img/gallery/wesley-snipes-has-something-to-say-about-the-latest-blade-news/intro-1563907716.jpg', userStatus: 'Finance Newbie', username: 'wesleysnipes' })
 
 
   return (
