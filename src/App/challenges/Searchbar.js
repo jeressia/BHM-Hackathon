@@ -28,22 +28,7 @@ export const Searchbar = () => {
         });
     }
 
-    // return <>
-    //     <form>
-    //         <input
-    //             type="text"
-    //             placeholder="search"
-    //             value={searchInput}
-    //             onChange={handleChange}
-    //         />
-    //         <button type='submit'>
-    //             search
-    //         </button>
-    //     </form>
-    // </>
-
-
-    return <div>
+    return <div className='search_bar_flex'>
 
         <input
             type="text"
@@ -51,6 +36,12 @@ export const Searchbar = () => {
             onChange={handleChange}
             value={searchInput} />
 
+        <form>
+            <button type='submit' >
+                <img src='https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-1024.png'
+                    alt='icon' className='img_search' />
+            </button>
+        </form>
         <table>
 
             <tbody>
@@ -62,12 +53,7 @@ export const Searchbar = () => {
             </tbody>
 
         </table>
-        <form>
-            <button type='submit' >search
-                {/* <img src=''
-                    className='' /> */}
-            </button>
-        </form>
+
 
     </div>
 }

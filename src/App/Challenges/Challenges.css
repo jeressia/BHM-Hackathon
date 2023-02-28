@@ -1,0 +1,28 @@
+.search_bar_flex {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2em;
+
+}
+
+.challenges_subtitle {
+    margin: 1em;
+}
+
+.img_search {
+    width: 1em;
+}
+
+.burger {
+    width: 2em;
+    margin-top: 1em;
+    /* padding-left: 2em; */
+}
+
+.tasks_title {
+    margin-left: 1em;
+}
+
+.challenges_title {
+    margin-left: .5em;
+}

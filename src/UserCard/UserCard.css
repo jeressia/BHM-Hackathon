@@ -1,0 +1,29 @@
+.UserCard {
+  margin-top: 10px;
+  display: flex;
+}
+
+.right-user-card {
+  margin-left: 10px;
+}
+
+.userImg {
+  height: 55px;
+  width: 55px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.usercard-username {
+  font-weight: bold;
+  color: #67A27F;
+  margin: 5px 0;
+}
+
+.usercard-atname {
+  font-weight: normal;
+}
+
+.usercard-status {
+  margin: 0;
+}
