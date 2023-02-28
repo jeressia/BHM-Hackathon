@@ -6,7 +6,7 @@ import fetchData from '../pages/api/generate';
 function ChatBubble(props) {
     const formattedResponse = props.children.replace(/\n/g, '<br>');
     return (
-        <div className={`chatbox-bubble ${props.talker}`}>
+        <div className={`chatbox-bubble ${props.talker}-bubble`}>
             <div className="chatbox-bubble__icon">
                 <div>
                     {
@@ -60,13 +60,12 @@ function Chatbox() {
         setDialogList(prevState => [...prevState, { "talker": "moneybot", "text": data.choices[0].text }]);
     }
 
-    console.log(dialogList)
     return (
         <div className="chatbox">
             <div className="chatbox-dialog">
                 {
-                    dialogList.map((d, index) => {
-                        return <ChatBubble key={index} talker={d.talker}>{d.text}</ChatBubble>
+                    dialogList.map((dialog, index) => {
+                        return <ChatBubble key={index} talker={dialog.talker}>{dialog.text}</ChatBubble>
                     })
                 }
             </div>
